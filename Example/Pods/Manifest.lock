@@ -1,0 +1,14 @@
+PODS:
+  - YHRoundBorderedButton (0.1.0)
+
+DEPENDENCIES:
+  - YHRoundBorderedButton (from `../`)
+
+EXTERNAL SOURCES:
+  YHRoundBorderedButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YHRoundBorderedButton: c65642b07e455c3b0383098a9b655c606e297833
+
+COCOAPODS: 0.29.0
