@@ -1,8 +1,5 @@
 # YHRoundBorderedButton
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/YHRoundBorderedButton/badge.png)](http://cocoadocs.org/docsets/YHRoundBorderedButton)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/YHRoundBorderedButton/badge.png)](http://cocoadocs.org/docsets/YHRoundBorderedButton)
-
 ![Demo](https://raw.githubusercontent.com/yhpark/YHRoundBorderedButton/master/Example/demo.gif)
 
 ## Usage
