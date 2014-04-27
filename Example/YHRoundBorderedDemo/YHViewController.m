@@ -7,19 +7,20 @@
 //
 
 #import "YHViewController.h"
+
 #import "YHRoundBorderedButton.h"
 
 @interface YHViewController ()
 
-@property(strong, nonatomic) YHRoundBorderedButton *openButton;
-@property(strong, nonatomic) YHRoundBorderedButton *greenButton;
-@property(strong, nonatomic) UIImageView *openImage;
+@property (strong, nonatomic) UIImageView *openImage;
+@property (strong, nonatomic) YHRoundBorderedButton *openButton;
+@property (strong, nonatomic) YHRoundBorderedButton *greenButton;
 
-@property(strong, nonatomic) YHRoundBorderedButton *updateButton;
-@property(strong, nonatomic) YHRoundBorderedButton *usd199Button;
-@property(strong, nonatomic) YHRoundBorderedButton *disabledButton;
+@property (strong, nonatomic) YHRoundBorderedButton *updateButton;
+@property (strong, nonatomic) YHRoundBorderedButton *usd199Button;
+@property (strong, nonatomic) YHRoundBorderedButton *disabledButton;
 
-@property(assign, nonatomic) NSInteger posY;
+@property (assign, nonatomic) NSInteger posY;
 
 @end
 
@@ -48,16 +49,17 @@
     [self.updateButton setTitle:@"UPDATE" forState:UIControlStateNormal];
     [self.updateButton sizeToFit];
     [self.view addSubview:self.updateButton];
-
+	
     self.usd199Button = [[YHRoundBorderedButton alloc] init];
-    [self.usd199Button setTitle:@"USD 1.99" forState:UIControlStateNormal];
+    [self.usd199Button setTitle:@"$1.99" forState:UIControlStateNormal];
     [self.usd199Button sizeToFit];
+    self.usd199Button.plusIconVisible = YES;
     [self.view addSubview:self.usd199Button];
     
     self.disabledButton = [[YHRoundBorderedButton alloc] init];
     [self.disabledButton setTitle:@"DISABLED" forState:UIControlStateNormal];
     [self.disabledButton sizeToFit];
-    [self.disabledButton setEnabled:NO];
+    self.disabledButton.enabled = NO;
     [self.view addSubview:self.disabledButton];
 }
 
@@ -77,9 +79,10 @@
 
 - (CGPoint)nextPosition
 {
-    if (!self.posY) {
+    if ( !self.posY ) {
         self.posY = 50;
     }
+    
     self.posY += 80;
     
     return CGPointMake(self.view.center.x, self.posY);
@@ -88,13 +91,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 @end
