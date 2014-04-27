@@ -10,8 +10,6 @@
 
 @interface YHRoundBorderedButton()
 
-@property(nonatomic, assign) BOOL plusIconVisible;
-
 @end
 
 @implementation YHRoundBorderedButton
@@ -54,9 +52,9 @@
     [self refreshBorderColor];
 }
 
-- (void)setPlusIconVisibility:(BOOL)show
+- (void)setPlusIconVisible:(BOOL)plusIconVisible
 {
-    self.plusIconVisible = show;
+	_plusIconVisible = plusIconVisible;
     
     // TODO
 }

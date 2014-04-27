@@ -10,6 +10,7 @@
 
 @interface YHRoundBorderedButton : UIButton
 
-- (void)setPlusIconVisibility:(BOOL)show;
+///	<#Description#>
+@property (nonatomic, getter = isPlusIconVisible) BOOL plusIconVisible;
 
 @end
