@@ -35,6 +35,15 @@
     return self;
 }
 
+- (instancetype)initWithFont:(UIFont *)font {
+    self = [self init];
+    if (self) {
+        _userFont = font;
+        [self setup];
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
