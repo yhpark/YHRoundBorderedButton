@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YHRoundBorderedButton : UIButton
+@interface YHRoundBorderedButton : UIButton 
 
-- (void)setPlusIconVisibility:(BOOL)show;
+- (instancetype)initWithFont:(UIFont *)font;
+- (id)initWithFrame:(CGRect)frame andFont:(UIFont *)font;
 
 @end

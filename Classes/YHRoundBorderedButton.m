@@ -11,6 +11,7 @@
 @interface YHRoundBorderedButton()
 
 @property(nonatomic, assign) BOOL plusIconVisible;
+@property(nonatomic, strong) UIFont *userFont;
 
 @end
 
@@ -34,6 +35,15 @@
     return self;
 }
 
+- (instancetype)initWithFont:(UIFont *)font {
+    self = [self init];
+    if (self) {
+        _userFont = font;
+        [self setup];
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -43,12 +53,26 @@
     return self;
 }
 
+- (id)initWithFrame:(CGRect)frame andFont:(UIFont *)font {
+    self = [self initWithFrame:frame];
+    if (self) {
+        _userFont = font;
+        [self setup];
+    }
+    return self;
+}
+
 - (void)setup
 {
     [self setTitleColor:[self tintColor] forState:UIControlStateNormal];
-    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     [self setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
-    [self.titleLabel setFont:[UIFont boldSystemFontOfSize:13]];
+    if (_userFont) {
+        [self setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+        [self.titleLabel setFont:_userFont];
+    } else {
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+        [self.titleLabel setFont:[UIFont boldSystemFontOfSize:13]];
+    }
     self.layer.cornerRadius = 3.5;
     self.layer.borderWidth = 1.0;
     [self refreshBorderColor];
