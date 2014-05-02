@@ -33,9 +33,10 @@
     [self.openImage sizeToFit];
     [self.view addSubview:self.openImage];
     
-    self.openButton = [[YHRoundBorderedButton alloc] init];
-    [self.openButton setTitle:@"OPEN" forState:UIControlStateNormal];
-    [self.openButton sizeToFit];
+    self.openButton = [[YHRoundBorderedButton alloc] initWithFrame:CGRectMake(100, 100, 200, 50) andFont:[UIFont fontWithName:@"AlegreSans" size:30.0f]];
+    self.openButton.tintColor = [UIColor whiteColor];
+    [self.openButton setTitle:@"start game" forState:UIControlStateNormal];
+//    [self.openButton sizeToFit];
     [self.view addSubview:self.openButton];
     
     self.greenButton = [[YHRoundBorderedButton alloc] init];
