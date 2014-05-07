@@ -49,7 +49,7 @@
     [self.updateButton setTitle:@"UPDATE" forState:UIControlStateNormal];
     [self.updateButton sizeToFit];
     [self.view addSubview:self.updateButton];
-	
+    
     self.usd199Button = [[YHRoundBorderedButton alloc] init];
     [self.usd199Button setTitle:@"$1.99" forState:UIControlStateNormal];
     [self.usd199Button sizeToFit];
