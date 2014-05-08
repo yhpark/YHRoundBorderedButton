@@ -67,7 +67,7 @@
     [self setTitleColor:[self tintColor] forState:UIControlStateNormal];
     [self setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     if (_userFont) {
-        [self setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+        [self setTitleColor:[self tintColor] forState:UIControlStateHighlighted];
         [self.titleLabel setFont:_userFont];
     } else {
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
