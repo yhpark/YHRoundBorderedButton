@@ -62,10 +62,11 @@
     [self setNeedsDisplay];
 }
 
-- (void)setTintColor:(UIColor *)tintColor
+- (void)tintColorDidChange
 {
-    [super setTintColor:tintColor];
-    [self setTitleColor:tintColor forState:UIControlStateNormal];
+    [super tintColorDidChange];
+    
+    [self setTitleColor:self.tintColor forState:UIControlStateNormal];
     [self refreshBorderColor];
 }
 
@@ -101,6 +102,11 @@
 {
     CGSize org = [super sizeThatFits:self.bounds.size];
     return CGSizeMake(org.width + 20, org.height - 2);
+}
+
+- (CGSize)intrinsicContentSize
+{
+    return [self sizeThatFits:CGSizeMake(0,0)];
 }
 
 - (void)drawRect:(CGRect)rect
