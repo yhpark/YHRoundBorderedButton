@@ -65,6 +65,8 @@
 
 - (void)viewWillLayoutSubviews
 {
+    self.posY = 0;
+
     self.greenButton.center = [self nextPosition];
     self.openButton.center = [self nextPosition];
     self.openImage.center = CGPointMake(self.openButton.center.x, self.openButton.center.y - 30);
